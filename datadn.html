@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+  <script type="text/javascript">
+    function iEsc(){ return false; }
+    function iRec(){ return true; }
+    function DisableKeys() {
+      if(event.ctrlKey || event.shiftKey || event.altKey) {
+        window.event.returnValue=false;
+        iEsc();}
+      }
+        document.ondragstart=iEsc;
+        document.onkeydown=DisableKeys;
+        document.oncontextmenu=iEsc;
+      if (typeof document.onselectstart !="undefined")
+        document.onselectstart=iEsc;
+    else{
+        document.onmousedown=iEsc;
+        document.onmouseup=iRec;
+    }
+    function DisableRightClick(qsyzDOTnet){
+      if (window.Event){
+      if (qsyzDOTnet.which == 2 || qsyzDOTnet.which == 3)
+        iEsc();}
+      else
+      if (event.button == 2 || event.button == 3){
+        event.cancelBubble = true
+        event.returnValue = false;
+        iEsc();}
+    }
+  </script>
+  <style>
+    body {
+    -webkit-user-select:none;
+    -webkit-touch-callout:none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    -ms-user-select: none;
+  }
+  </style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title -->
+    <title>弘光查詢系統</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="./img/core-img/favicon.svg">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+    <!-- /Preloader -->
+
+
+    <!-- Header Area Start -->
+    <header class="header-area">
+        <!-- Main Header Start -->
+        <div class="main-header-area">
+            <div class="classy-nav-container breakpoint-off">
+                <div class="container">
+                    <!-- Classy Menu -->
+                    <nav class="classy-navbar justify-content-between" id="alimeNav">
+
+                        <!-- Logo -->
+                        <a class="nav-brand" href="./index.html"><img class="imgp" src="./img/core-img/logo1.svg" alt=""></a>
+
+                        <!-- Navbar Toggler -->
+                        <div class="classy-navbar-toggler">
+                            <span class="navbarToggler"><span></span><span></span><span></span></span>
+                        </div>
+
+                        <!-- Menu -->
+                        <div class="classy-menu">
+                            <!-- Menu Close Button -->
+                            <!-- <div class="classycloseIcon">
+                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                            </div> -->
+                            <!-- Nav Start -->
+                            <div class="classynav">
+                                <ul id="nav">
+                                    <li><a href="./index.html">首頁</a></li>
+                                    <li><a href="./about.html">關於</a></li>
+                                    <li><a href="./guide.html">教學</a></li>
+									<li><a href="#">查詢系統</a>
+                                        <ul class="dropdown">
+                                            <li><a href="./datain.html">資料查詢</a></li>
+                                            <li><a href="./snin.html">序號查詢</a></li>
+                                            <li><a href="./checkin.html">查驗查詢</a></li>
+                                        </ul>
+                                    </li>
+									<li><a href="#">資料查詢</a>
+                                        <ul class="dropdown">
+                                            <li><a href="./datafd.html">資料查看</a></li>
+											<li class="active"><a href="./datadn.html">資料下載</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- Nav End -->
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header Area End -->
+
+    <!-- Breadcrumb Area Start -->
+    <section class="breadcrumb-area bg-img bg-overlay jarallax" style="background-image: url(img/bg-img/f1.jpg);">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-12">
+                    <div class="breadcrumb-content text-center">
+                        <h2 class="page-title">資料下載</h2>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb justify-content-center">
+                                <li class="breadcrumb-item"><a href="index.html"><i class="icon_house_alt"></i> 首頁</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">資料下載</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Breadcrumb Area End -->
+
+	
+    <!-- Blog Area Start -->
+    <div class="alime-blog-area section-padding-80-0 mb-70">
+        <div class="container">
+			<div class="row">
+                <div class="col-12">
+                    <!-- Projects Menu -->
+                    <div class="alime-projects-menu wow fadeInUp" data-wow-delay="100ms">
+                        <div class="portfolio-menu text-center">
+							<p><button class="btn active" data-filter="*">各種資料</button><br/></p>
+                        </div>
+						<div class="portfolio-menu text-center">
+							<p><button class="btn active" data-filter="*"></button><br/></p>
+                        </div>
+                    </div>
+                </div>
+
+             <!-- Single Blog Area -->
+                <div class="col-12 col-sm-6 col-lg-3 mb-30 wow fadeInUp" data-wow-delay="600ms">
+                    <div class="single-post-area wow fadeInUpBig" data-wow-delay="400ms">
+                        <!-- Post Thumbnail -->
+                        <a href="#" class="post-thumbnail"><img src="img/bg-img/d1.jpg" alt=""></a>
+                        <!-- Post Catagory -->
+                        <a href="#" class="btn post-catagory">弘光系列</a>
+                        <!-- Post Conetent -->
+                        <div class="post-content">
+							<a href="#" class="post-title1" style="font-weight:800;">Feb 14, 2023</a><br/>
+                            <a href="#" class="post-title" style="font-weight:800;">弘光直播</a><br/><br/>
+							<a href="#" class="btnd" target="_blank">下載 ></a>
+                        </div>
+                    </div>
+                </div>
+				
+            <!-- Single Blog Area -->
+                <div class="col-12 col-sm-6 col-lg-3 mb-30 wow fadeInUp" data-wow-delay="600ms">
+                    <div class="single-post-area wow fadeInUpBig" data-wow-delay="400ms">
+                        <!-- Post Thumbnail -->
+                        <a href="#" class="post-thumbnail"><img src="img/bg-img/d2.jpg" alt=""></a>
+                        <!-- Post Catagory -->
+                        <a href="#" class="btn post-catagory">弘光系列</a>
+                        <!-- Post Conetent -->
+                        <div class="post-content">
+							<a href="#" class="post-title1" style="font-weight:800;">Feb 14, 2023</a><br/>
+                            <a href="#" class="post-title" style="font-weight:800;">弘光電視 2</a><br/><br/>
+							<a href="#" class="btnd" target="_blank">下載 ></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Blog Area -->
+                <div class="col-12 col-sm-6 col-lg-3 mb-30 wow fadeInUp" data-wow-delay="600ms">
+                    <div class="single-post-area wow fadeInUpBig" data-wow-delay="400ms">
+                        <!-- Post Thumbnail -->
+                        <a href="#" class="post-thumbnail"><img src="img/bg-img/d3.jpg" alt=""></a>
+                        <!-- Post Catagory -->
+                        <a href="#" class="btn post-catagory">弘光系列</a>
+                        <!-- Post Conetent -->
+                        <div class="post-content">
+							<a href="#" class="post-title1" style="font-weight:800;">Feb 14, 2023</a><br/>
+                            <a href="#" class="post-title" style="font-weight:800;">弘光點播</a><br/><br/>
+							<a href="#" class="btnd" target="_blank">下載 ></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Blog Area -->
+                <div class="col-12 col-sm-6 col-lg-3 mb-30 wow fadeInUp" data-wow-delay="600ms">
+                    <div class="single-post-area wow fadeInUpBig" data-wow-delay="400ms">
+                        <!-- Post Thumbnail -->
+                        <a href="#" class="post-thumbnail"><img src="img/bg-img/d4.jpg" alt=""></a>
+                        <!-- Post Catagory -->
+                        <a href="#" class="btn post-catagory">弘光系列</a>
+                        <!-- Post Conetent -->
+                        <div class="post-content">
+							<a href="#" class="post-title1" style="font-weight:800;">Feb 14, 2023</a><br/>
+                            <a href="#" class="post-title" style="font-weight:800;">弘光三合一</a><br/><br/>
+							<a href="#" class="btnd" target="_blank">下載 ></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Blog Area -->
+                <div class="col-12 col-sm-6 col-lg-3 mb-30 wow fadeInUp" data-wow-delay="600ms">
+                    <div class="single-post-area wow fadeInUpBig" data-wow-delay="400ms">
+                        <!-- Post Thumbnail -->
+                        <a href="#" class="post-thumbnail"><img src="img/bg-img/d5.jpg" alt=""></a>
+                        <!-- Post Catagory -->
+                        <a href="#" class="btn post-catagory">弘光系列</a>
+                        <!-- Post Conetent -->
+                        <div class="post-content">
+							<a href="#" class="post-title1" style="font-weight:800;">Feb 14, 2023</a><br/>
+                            <a href="#" class="post-title" style="font-weight:800;">弘光紳士</a><br/><br/>
+							<a href="#" class="btnd" target="_blank">下載 ></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Blog Area -->
+                <div class="col-12 col-sm-6 col-lg-3 mb-30 wow fadeInUp" data-wow-delay="600ms">
+                    <div class="single-post-area wow fadeInUpBig" data-wow-delay="400ms">
+                        <!-- Post Thumbnail -->
+                        <a href="#" class="post-thumbnail"><img src="img/bg-img/d6.jpg" alt=""></a>
+                        <!-- Post Catagory -->
+                        <a href="#" class="btn post-catagory1">其他系列</a>
+                        <!-- Post Conetent -->
+                        <div class="post-content">
+							<a href="#" class="post-title1" style="font-weight:800;">Feb 14, 2023</a><br/>
+                            <a href="#" class="post-title" style="font-weight:800;">泥視頻</a><br/><br/>
+							<a href="#" class="btnd" target="_blank">下載 ></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Blog Area -->
+                <div class="col-12 col-sm-6 col-lg-3 mb-30 wow fadeInUp" data-wow-delay="600ms">
+                    <div class="single-post-area wow fadeInUpBig" data-wow-delay="400ms">
+                        <!-- Post Thumbnail -->
+                        <a href="#" class="post-thumbnail"><img src="img/bg-img/d7.jpg" alt=""></a>
+                        <!-- Post Catagory -->
+                        <a href="#" class="btn post-catagory1">其他系列</a>
+                        <!-- Post Conetent -->
+                        <div class="post-content">
+							<a href="#" class="post-title1" style="font-weight:800;">Feb 14, 2023</a><br/>
+                            <a href="#" class="post-title" style="font-weight:800;">ETH TV</a><br/><br/>
+							<a href="#" class="btnd" target="_blank">下載 ></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Blog Area -->
+                <div class="col-12 col-sm-6 col-lg-3 mb-30 wow fadeInUp" data-wow-delay="600ms">
+                    <div class="single-post-area wow fadeInUpBig" data-wow-delay="400ms">
+                        <!-- Post Thumbnail -->
+                        <a href="#" class="post-thumbnail"><img src="img/bg-img/d8.jpg" alt=""></a>
+                        <!-- Post Catagory -->
+                        <a href="#" class="btn post-catagory1">其他系列</a>
+                        <!-- Post Conetent -->
+                        <div class="post-content">
+							<a href="#" class="post-title1" style="font-weight:800;">Feb 14, 2023</a><br/>
+                            <a href="#" class="post-title" style="font-weight:800;">待續</a><br/><br/>
+							<a href="#" class="btnd" target="_blank">待續 ></a>
+                        </div>
+                    </div>
+                </div>
+				
+            </div>
+        </div>
+    </div>
+    <!-- Blog Area End -->
+
+    <!-- Footer Area Start -->
+    <footer class="footer-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="footer-content d-flex align-items-center justify-content-between">
+                        <!-- Copywrite Text -->
+                        <div class="copywrite-text">
+                            <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> <b>HK Team</b> All rights reserved.</p>
+                        </div>
+                        <!-- Footer Logo -->
+                        <div class="footer-logo">
+                            <a href="#"><img class="imgp" src="img/core-img/logo2.svg" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Area End -->
+
+    <!-- **** All JS Files ***** -->
+    <!-- jQuery 2.2.4 -->
+    <script src="js/jquery.min.js"></script>
+    <!-- Popper -->
+    <script src="js/popper.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- All Plugins -->
+    <script src="js/alime.bundle.js"></script>
+    <!-- Active -->
+    <script src="js/default-assets/active.js"></script>
+
+</body>
+
+</html>
